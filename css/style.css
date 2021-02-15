@@ -64,7 +64,7 @@ h2 {
 .article__content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .article__content, .text__container > p {
