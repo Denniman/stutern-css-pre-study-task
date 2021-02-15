@@ -25,6 +25,7 @@ body {
     font-size: 3rem;
     font-family: 'Chelsea Market', cursive;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px #fffff2;
 }
 
 .header > h2 {
