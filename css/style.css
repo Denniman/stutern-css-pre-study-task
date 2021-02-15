@@ -1,3 +1,8 @@
+:root {
+    --color-primary: #e4572e;
+    --secondary-color: #fffff2;
+}
+
 *,
 *::before,
 *::after {
@@ -16,7 +21,7 @@ body {
 }
 
 .header {
-    background-color: #e4572e;
+    background-color: var(--color-primary);
     text-align: center;
     padding-top: 1rem;
 }
@@ -25,7 +30,7 @@ body {
     font-size: 3rem;
     font-family: 'Chelsea Market', cursive;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px #fffff2;
+    text-shadow: 2px 2px var(--secondary-color);
 }
 
 .header > h2 {
@@ -34,7 +39,7 @@ body {
 }
 
 .main-wrapper {
-    background-color: #fffff2;
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +50,7 @@ body {
     width: 50%;
     padding: 0 .5rem;
     border: 4px solid #050401;
-    box-shadow: 3px 3px 0 0 #e4572e;
+    box-shadow: 3px 3px 0 0 var(--color-primary);
 }
 
 h2 {
@@ -90,7 +95,7 @@ hr {
 .form > input {
     margin-left: .5rem;
     padding: .3rem .2rem;
-    box-shadow: 3px 3px 0 0 #e4572e;
+    box-shadow: 3px 3px 0 0 var(--color-primary);
 }
 
 .copywrite {
