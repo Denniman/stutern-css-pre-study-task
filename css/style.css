@@ -46,6 +46,22 @@ body {
     align-items: center;
 }
 
+.btn__container {
+    margin-top: 2rem;
+    width: 40%;
+}
+
+.btn {
+    width: 100%;
+    padding: .7rem 5rem;
+    font-size: 1.6rem;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    background-color: #050401;
+    box-shadow: 3px 3px 0 0 var(--color-primary);
+}
+
 .article {
     width: 50%;
     padding: 0 .5rem;
