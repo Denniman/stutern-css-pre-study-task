@@ -19,6 +19,13 @@
             <button class="btn">Add a new note</button>
         </div>
         <div class="notes-summary"></div>
+
+        <div class="article__container">
+            <!-- <article id="newArticle">
+                <div class="article__content" id="newContent"></div>
+            </article> -->
+        </div>
+
         <article class="article">
             <h2>13/05/23: Spatulas</h2>
             <div class="article__content">
@@ -61,15 +68,16 @@
         <div class="modal__content" id="modal--cont">
             <span class="close">&times;</span>
             <div class="form__container">
+                <!-- <h3>Write your note</h3> -->
                 <form action="#" class="modal__form">
-                    <input type="text" placeholder="Enter title" class="input__title">
-                    <textarea name="" id="" cols="40" rows="10" class="textarea" placeholder="Enter note here.."></textarea>
-                    <button type="submit" value="submit" class="btn__submit">Submit</button>
+                    <input type="text" placeholder="Enter title" name="noteTitle" class="input__title">
+                    <textarea name="" id="" cols="40" rows="10" name="noteBody" class="textarea" placeholder="Enter note here.."></textarea>
+                    <button type="submit" value="submit" class="btn__submit">Ok</button>
                 </form>
             </div>
         </div>
     </div>
-
+ 
     <script src="./js/app.js"></script>
 </body>
 </html>
