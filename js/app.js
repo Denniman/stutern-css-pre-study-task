@@ -21,11 +21,22 @@ const notesSummary = () => {
 
 notesSummary()
 
+// render notes to screen
+// step 1: create a new [article] element
+// step 2: add textContent to the new element
+document.createElement('article').classList.add('article')
+
+
 button.addEventListener('click', () => {
-    notes.push({
-        title: prompt('Enter note title'),
-        body: prompt('Write your note', 'empty note')
-    })
+    const titleInput = prompt('Enter note title')
+    const bodyInput = prompt('Write your note', 'empty note')
+
+    if(titleInput.length > 0 && bodyInput.length > 0) {
+        notes.push({
+            title: prompt('Enter note title'),
+            body: prompt('Write your note', 'empty note')
+        })
+    }
     
     console.log(notes)
     notesSummary()

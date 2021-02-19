@@ -118,3 +118,66 @@ hr {
     font-size: 1.6rem;
     margin-top: 1rem;
 }
+
+.modal {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal__content {
+    width: 70%;
+    /* height: 50%; */
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2rem 4rem rgba(0,0,0, .2);
+}
+
+.close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    font-size: 28px;
+    font-weight: bold;
+    transition: all .2s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 5rem; 
+}
+
+.input__title {
+    padding: .8rem 1rem;
+    border-radius: 1.5rem;
+    width: 40%;
+} 
+
+.textarea {
+    margin-top: 2rem;
+    width: 50%;
+    padding: .8rem 1.5rem;
+}
+
+.btn__submit {
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+}
