@@ -1,13 +1,16 @@
 const button = document.querySelector('.btn')
+const modal = document.querySelector('.modal')
+const modalContent = document.querySelector('#modal--cont')
+const closeBtn = document.querySelector('.close')
 
 const notes = [ 
     {
         title: 'Spatulas',
-        body: 'Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)'
+        body: 'Yesterday I went to the store and got some much-needed'
     },
     {
         title: 'Cookie Monster Cupcakes',
-        body: 'My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.'
+        body: 'My favorite cartoon character is Cookie Monster'
     }
 ]
 
@@ -28,16 +31,26 @@ document.createElement('article').classList.add('article')
 
 
 button.addEventListener('click', () => {
-    const titleInput = prompt('Enter note title')
-    const bodyInput = prompt('Write your note', 'empty note')
+    // const titleInput = prompt('Enter note title')
+    // const bodyInput = prompt('Write your note', 'empty note')
 
-    if(titleInput.length > 0 && bodyInput.length > 0) {
-        notes.push({
-            title: prompt('Enter note title'),
-            body: prompt('Write your note', 'empty note')
-        })
-    }
+    // if(titleInput.length > 0 && bodyInput.length > 0) {
+    //     notes.push({
+    //         title: prompt('Enter note title'),
+    //         body: prompt('Write your note', 'empty note')
+    //     })
+    // }
     
+    modal.style.display = "block"
+    modalContent.classList.add('visible')
     console.log(notes)
     notesSummary()
+})
+
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none'
+})
+
+window.addEventListener('click', (e) => {
+    e.target == modal ? modal.style.display = "none": null
 })

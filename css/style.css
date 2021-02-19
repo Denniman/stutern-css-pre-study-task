@@ -120,6 +120,7 @@ hr {
 }
 
 .modal {
+    display: none;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -136,8 +137,14 @@ hr {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
     box-shadow: 0 2rem 4rem rgba(0,0,0, .2);
+}
+/* modal open state */
+.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .close {
