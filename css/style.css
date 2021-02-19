@@ -148,21 +148,15 @@ hr {
 }
 
 .modal__content {
-    width: 70%;
-    /* height: 50%; */
-    background-color: #fefefe;
+    width: 50%;
+    background-color: var(--secondary-color);
     position: absolute;
     top: 50%;
     left: 50%;
-    /* opacity: 0; */
+    border-radius: 2rem;
     transform: translate(-50%, -50%);
     box-shadow: 0 2rem 4rem rgba(0,0,0, .2);
 }
-/* modal open state */
-/* .visible {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-} */
 
 .close {
     color: #aaaaaa;
@@ -192,16 +186,22 @@ hr {
 .input__title {
     padding: .8rem 1rem;
     border-radius: 1.5rem;
-    width: 40%;
+    width: 50%;
 } 
 
 .textarea {
     margin-top: 2rem;
     width: 50%;
-    padding: .8rem 1.5rem;
+    padding: .8rem 1rem;
+    border-radius: 1.5rem;
 }
 
 .btn__submit {
     margin-top: 1rem;
-    padding: .5rem 1rem;
+    padding: .5rem 10rem;
+    border-radius: 1.5rem;
+    border: none;
+    color: #fff;
+    background-color: var(--color-primary);
+    cursor: pointer;
 }
