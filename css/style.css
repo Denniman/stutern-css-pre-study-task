@@ -95,9 +95,7 @@ h2 {
 .narticle__content {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
     justify-content: center;
-    /* width: 50%; */
 }
 
 .article__content, .text__container > p {
@@ -218,4 +216,56 @@ hr {
 
 .btn__submit:hover {
     background-color: #e43;
+}
+
+@media only screen and (max-width: 375px) {
+    html {
+        font-size: 50%;
+    }
+
+    .btn__container {
+        width: 80%;
+    }
+
+    .article {
+        width: 90%;
+    }
+
+    .article__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .btn__container {
+        width: 80%;
+    }
+
+    .article {
+        width: 90%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 5rem;
+    }
+
+    .footer > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media only screen and (max-width: 870px) {
+    html {
+        font-size: 50%;
+    }
 }
