@@ -147,8 +147,19 @@ hr {
     background-color: rgba(0,0,0,0.4);
 }
 
+.form__container {
+    padding: 1.5rem 5rem;
+}
+
+.form__container > h3 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: -1.5rem;
+}
+
 .modal__content {
-    width: 50%;
+    width: 45%;
+    height: 50%;
     background-color: var(--secondary-color);
     position: absolute;
     top: 50%;
@@ -183,17 +194,15 @@ hr {
     padding: 4rem 5rem; 
 }
 
-.input__title {
+.input__title, .textarea {
     padding: .8rem 1rem;
-    border-radius: 1.5rem;
-    width: 50%;
-} 
+    border-radius: 1rem;
+    width: 100%;
+    border: 1px solid #050401;
+}
 
 .textarea {
     margin-top: 2rem;
-    width: 50%;
-    padding: .8rem 1rem;
-    border-radius: 1.5rem;
 }
 
 .btn__submit {
@@ -204,4 +213,9 @@ hr {
     color: #fff;
     background-color: var(--color-primary);
     cursor: pointer;
+    transition: all .3s;
+}
+
+.btn__submit:hover {
+    background-color: #e43;
 }

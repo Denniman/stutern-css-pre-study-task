@@ -5,6 +5,7 @@ const closeBtn = document.querySelector('.close')
 const form = document.querySelector('.modal__form')
 const noteTitle = document.querySelector('.input__title')
 const noteBody = document.querySelector('.textarea')
+const submitBtn = document.querySelector('.btn__submit')
 
 const notes = []
 
@@ -25,38 +26,7 @@ button.addEventListener('click', () => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-
-    notes.push({
-        title: noteTitle.value,
-        body: noteBody.value
-    })
-
-    const date = new Date();
-    const articleContainer = document.querySelector('.article__container')
-    const article = document.createElement('article')
-    article.classList.add('article')
-    articleContainer.appendChild(article)
-    // note title
-    const titleText = document.createElement('h2')
-    // titleText.textContent = `${moment().format('DD/MM/YYYY')}: ${noteTitle.value}`
-    titleText.textContent = `${date.toLocaleDateString("en-GB")}: ${noteTitle.value}`
-    article.appendChild(titleText)
-
-    // note body
-    const articleBody = document.createElement('div')
-    articleBody.classList.add('article__content')
-    article.appendChild(articleBody)
-    const bodyText = document.createElement('p')
-    bodyText.textContent = noteBody.value
-    articleBody.appendChild(bodyText)
-
-
-
-    noteTitle.value = ''
-    noteBody.value = ''
-    notesSummary()
-    modal.style.display = 'none'
-    // console.log(notes)
+    post()     
 })
 
 closeBtn.addEventListener('click', () => {
@@ -66,3 +36,42 @@ closeBtn.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
     e.target == modal ? modal.style.display = "none": null
 })
+
+function post() {
+    let postTitle = noteTitle.value
+    let postBody = noteBody.value 
+    if(!postTitle) {
+        return noteTitle.style.border = '1px solid red'
+    } else if(!postBody) {
+        return noteBody.style.border = '1px solid red'
+    } else {
+        notes.push({
+            title: postTitle,
+            body: postBody
+        })
+    
+        notesSummary()
+        modal.style.display = 'none'
+    
+        const date = new Date();
+        const articleContainer = document.querySelector('.article__container')
+        const article = document.createElement('article')
+        article.classList.add('article')
+        articleContainer.appendChild(article)
+    // note title
+        const titleText = document.createElement('h2')
+        titleText.textContent = `${date.toLocaleDateString("en-GB")}: ${postTitle}`
+        article.appendChild(titleText)
+    
+    // note body
+        const articleBody = document.createElement('div')
+        articleBody.classList.add('article__content')
+        article.appendChild(articleBody)
+        const bodyText = document.createElement('p')
+        bodyText.textContent = postBody
+        articleBody.appendChild(bodyText)
+        
+        noteTitle.value = ''
+        noteBody.value = ''
+    }
+}
