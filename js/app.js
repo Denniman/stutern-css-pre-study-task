@@ -57,7 +57,9 @@ function post() {
         const articleContainer = document.querySelector('.article__container')
         const article = document.createElement('article')
         article.classList.add('article')
-        articleContainer.appendChild(article)
+        const articleFirtChild = articleContainer.firstChild
+        articleContainer.insertBefore(article, articleFirtChild)
+        // articleContainer.appendChild(article)
     // note title
         const titleText = document.createElement('h2')
         titleText.textContent = `${date.toLocaleDateString("en-GB")}: ${postTitle}`
